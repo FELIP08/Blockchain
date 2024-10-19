@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Viewer</title>
+    <link rel="stylesheet" href="style1.css">
+    <script>
+        async function mostrarBlockchain() {
+            const response = await fetch('http://localhost:3000/getBlockchain');
+            const chain = await response.json();
+            const tbody = document.querySelector('tbody');
+            tbody.innerHTML = '';
+            chain.forEach(block => {
+                const row = document.createElement('tr');
+                const tdBlock = document.createElement('td');
+                tdBlock.textContent = block.height;
+                const tdNombre = document.createElement('td');
+                tdNombre.textContent = block.body.data;
+                const tdLlegada = document.createElement('td');
+                tdLlegada.textContent = block.arrival;
+                row.appendChild(tdBlock);
+                row.appendChild(tdNombre);
+                row.appendChild(tdLlegada);
+                tbody.appendChild(row);
+            });
+        }
+
+        function filtrarTabla() {
+            const nombre = document.getElementById('busqueda').value.toLowerCase();
+            const tbody = document.querySelector('tbody');
+            const rows = tbody.getElementsByTagName('tr');
+            for (let i = 0; i < rows.length; i++) {
+                const tdNombre = rows[i].getElementsByTagName('td')[1];
+                if (tdNombre) {
+                    const valorNombre = tdNombre.textContent;
+                    if (valorNombre.toLowerCase().indexOf(nombre) > -1) {
+                        rows[i].style.display = '';
+                    } else {
+                        rows[i].style.display = 'none';
+                    }
+                }
+            }
+        }
+
+        window.onload = function() {
+            mostrarBlockchain();
+            document.getElementById('boton').addEventListener('click', filtrarTabla);
+        };
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="text">
+            <a href="main.html">
+            <h1>Blockchain Estudiantes</h1>
+            </a>
+        </div>
+        <div class="icon">
+            <a href="index.html" id="exit">
+            <img src="exit.png" class="icon_exit">
+            <div class="salida">
+                <h2>Salir</h2>
+            </div>
+            </a>
+        </div>
+    </header>
+    <div class="main">
+        <h1>Estudiantes</h1>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="buscar">
+                <div class="barra">
+                    <h2>Buscar Estudiante:</h2>
+                    <input type="text" id="busqueda">
+                    <button id="boton"><img src="lupa.png"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesion</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validar(){
+            event.preventDefault();
+            var usuario_ing = document.getElementById("usuario").value;
+            var password_ing = document.getElementById("password").value;
+            var usuario = "felipe";
+            var password = "010208"
+            if (usuario_ing === usuario && password_ing === password) {
+                window.location.href = "main.html";
+            } else {
+                alert("Usuario o contraseña incorrectos. Inténtalo de nuevo.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="inicio">
+            <form onsubmit="validar()" method="post">
+                <div class="enca">
+                    <h3>Iniciar Sesion</h3>
+                </div>
+                <ul>
+                    <li>
+                        <label>Usuario</label><br>
+                        <div class="icons">
+                            <img src="usuario.png" class="icon_usu">
+                            <input type="text" name="user" id="usuario" placeholder="Usuario...">
+                        </div>
+                    </li>
+                    <li>
+                        <label>Contraseña</label><br>
+                        <div class="icons">
+                            <img src="cerrar.png" class="icon_usu">
+                            <input type="password" name="user_password" id="password" placeholder="Contraseña...">
+                        </div>
+                    </li>
+                </ul>
+                <div class="buto">
+                    <button type="submit">INGRESAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

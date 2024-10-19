@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Estudiantes</title>
+    <link rel="stylesheet" href="style2.css">
+    <script>
+        async function addBlock() {
+            const data = document.getElementById('usuario').value;
+            await fetch(`http://localhost:3000/addBlock/${data}`);
+            fetchBlockchain();
+        }
+        window.onload;
+    </script>
+</head>
+<body>
+    <header>
+        <div class="text">
+            <a href="main.html">
+            <h1>Blockchain Estudiantes</h1>
+            </a>
+        </div>
+        <div class="icon">
+            <a href="index.html" id="exit">
+            <img src="exit.png" class="icon_exit">
+            <div class="salida">
+                <h2>Salir</h2>
+            </div>
+            </a>
+        </div>
+    </header>
+    <div class="main">
+        <h1>Ingresar Estudiantes</h1>
+        <div class="container">
+            <form>
+                <ul>
+                    <li>
+                        <div class="icons">
+                            <img src="usuario.png" class="icon_usu">
+                            <input type="text" name="user" id="usuario" placeholder="Nombre...">
+                        </div>
+                    </li>
+                </ul>
+                <div class="buto">
+                    <button onclick="addBlock()">Añadir</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
