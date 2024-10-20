@@ -98,7 +98,7 @@ button:hover{
         height: auto;
         top: 50%;
         left: 50%;
-        margin-left: auto;
+        margin-left: -45%;
         margin-right: auto;
         padding: 15px;
         border-radius: 20px;
@@ -132,6 +132,6 @@ button:hover{
     button{
         height: 40px;
         width: 100%;
-        font-size: 16px;
+        font-size: 14px;
     }
 }
