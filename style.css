@@ -91,3 +91,12 @@ button:hover{
 #boton{
     background-image: scr="lupa.png";
 }
+@media (max-width: 720px){
+    h3{
+        font-size: 52px;
+    }
+    .container{
+        height: 500px;
+
+    }
+}
