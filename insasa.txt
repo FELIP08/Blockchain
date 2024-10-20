@@ -1,5 +1,0 @@
-npm install crypto-js
-npm i hex2ascii
-npm i express
-npm i cors
-node index.js
