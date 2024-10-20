@@ -7,7 +7,6 @@ $port = getenv('RAILWAY_PORT');
 
 $conn = new mysqli($host, $user, $pass, $db, $port);
 
-// Verificar la conexión
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 } else {
