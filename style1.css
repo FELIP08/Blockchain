@@ -118,13 +118,14 @@ ul{
 }
 @media (max-width: 720px){
     h1{
-        font-size: 28px;
+        font-size: 20px;
     }
     h2{
-        font-size: 21px;
+        font-size: 14px;
     }
     header{
         height: 50px;
+        padding: 20px;
     }
     .icon{
         height: 26px;
@@ -135,8 +136,17 @@ ul{
     .container{
         width: 90%;
     }
+    table{
+        font-size: 9px;
+    }
+    th{
+        padding: 10px 5px;
+    }
+    td{
+        padding: 5px;
+    }
     .barra h2{
-        font-size: 18px;
+        font-size: 10px;
     }
     #busqueda{
         height: 20px;
