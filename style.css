@@ -1,0 +1,136 @@
+body{
+    background-color: #243642;
+    color: #E2F1E7;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+h3{
+    font-size: 32px;
+    margin: 0%;
+}
+.container{
+    position: absolute;
+    height: 300px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+    padding: 30px;
+    background-color: #387478;
+    border: solid 3px;
+    border-color: #E2F1E7;
+    border-radius: 20px 60px;
+}
+.inicio{
+    width: 400px;
+}
+form{
+    width: 100%;
+}
+.enca{
+    width: auto;
+    text-align: center;
+    margin-bottom: 18px;
+}
+ul{
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+}
+li{
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+.icons{
+    display: flex;
+    margin-top: 10px;
+}
+.icon_usu{
+    background-color: #629584;
+    height: 32px;
+    border: solid 2px;
+    border-color: black transparent black black;
+    border-radius: 5px 0px 0px 5px;
+}
+label{
+    font-size: 22px;
+    font-weight: bold;
+}
+input{
+    width: 390px;
+    height: 30px;
+    border: solid 2px;
+    border-color: black;
+    border-radius: 0px 10px 10px 0px;
+}
+.buto{
+    margin-top: 30px;
+    width: auto;
+    text-align: center;
+}
+button{
+    height: 40px;
+    width: 200px;
+    border: solid 2px;
+    border-radius: 30px;
+    border-color: black;
+    background-color: #629584;
+    font-size: 14px;
+    font-weight: bold;
+    color: #E2F1E7;
+}
+button:hover{
+    color: #243642;
+}
+@media (max-width: 720px){
+    body{
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+        overflow-x: hidden;
+    }
+    h3{
+        font-size: 44px;
+    }
+    .container{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 50%;
+        left: 0;
+        margin-left: 0;
+        padding: 15px;
+        border-radius: 20px;
+    }
+    .inicio{
+        width: 100%;
+    }
+    .enca{
+        text-align: center;
+        margin-bottom: 18px;
+    }
+    .icons{
+        display: flex;
+        margin-top: 15px;
+    }
+    .icon_usu{
+        height: 38px;
+    }
+    label{
+        font-size: 24px;
+    }
+    input{
+        width: 100%;
+        height: 36px;
+        font-size: 18px;
+    }
+    .buto{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    button{
+        height: 40px;
+        width: 100%;
+        font-size: 14px;
+    }
+}
